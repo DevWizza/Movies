@@ -49,7 +49,8 @@ namespace Movies.ViewModels
                     Score = 4,
                     Title = "IT",
                     Genre = "Thriller",
-                    Rating = "PG-13"
+                    Rating = "PG-13",
+                    Image = "https://cdn.pixabay.com/photo/2017/08/19/10/00/eagle-2657888_960_720.jpg"
                 },
                 new Movie
                 {
@@ -57,7 +58,17 @@ namespace Movies.ViewModels
                     Score = 5,
                     Title = "Wonder Woman",
                     Genre = "Fantasy",
-                    Rating = "PG-13"
+                    Rating = "PG-13",
+                    Image = "https://cdn.pixabay.com/photo/2017/08/23/08/33/cats-eyes-2671903_960_720.jpg"
+                },
+                new Movie
+                {
+                    Id = 2,
+                    Score = 2,
+                    Title = "Toy Story 3",
+                    Genre = "Fantasy",
+                    Rating = "G",
+                    Image = "https://cdn.pixabay.com/photo/2017/04/06/09/37/toy-2207781_960_720.jpg"
                 }
             };
 

@@ -50,8 +50,6 @@
 	<string>LaunchScreen</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
@@ -59,5 +57,11 @@
 			<string>Document Type 1</string>
 		</dict>
 	</array>
+	<key>CFBundleName</key>
+	<string>Movies</string>
+	<key>Custom Property</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
 </dict>
 </plist>

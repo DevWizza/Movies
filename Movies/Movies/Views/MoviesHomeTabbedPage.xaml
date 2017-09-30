@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Movies.Views.MoviesHomeTabbedPage"
@@ -6,7 +6,7 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:screens="clr-namespace:Movies.Views;assembly=Movies"
              BarBackgroundColor="Black"
-             BarTextColor="Red">
+             BarTextColor="#DB0A5B">
 
     <screens:ShowingNowNavigationPage Title="{Binding ShowingNowTitle}" Icon="ic_list_white" BarTextColor="White">
         <x:Arguments>
