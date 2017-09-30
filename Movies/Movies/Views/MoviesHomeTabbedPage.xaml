@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.MoviesHomeTabbedPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:screens="clr-namespace:Movies.Views;assembly=Movies"
+             BarBackgroundColor="Black"
+             BarTextColor="Red">
+
+    <screens:ShowingNowNavigationPage Title="{Binding ShowingNowTitle}" Icon="ic_list_white" BarTextColor="White">
+        <x:Arguments>
+            <screens:ShowingNow BindingContext="{Binding ShowingNowViewModel}"/>
+        </x:Arguments>
+    </screens:ShowingNowNavigationPage>
+
+    <screens:CategoriesNavigationPage Title="{Binding CategoriesTitle}" Icon="ic_filter_list_white">
+        <x:Arguments>
+            <screens:Categories BindingContext="{Binding CategoriesViewModel}"/>
+        </x:Arguments>
+    </screens:CategoriesNavigationPage>
+
+</TabbedPage>

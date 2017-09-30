@@ -1,34 +1,31 @@
-﻿using System;
+﻿using Movies.Views;
+using Prism.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 
 namespace Movies
 {
-    public partial class App : Application
+    public partial class App : PrismApplication
     {
-        public App()
+        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+
+        protected override void OnInitialized()
         {
             InitializeComponent();
 
-            MainPage = new Movies.MainPage();
+            NavigationService.NavigateAsync($"{Screens.HomeTabsContainer}");
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes()
         {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            Container.RegisterTypeForNavigation<MoviesHomeTabbedPage>();
+            Container.RegisterTypeForNavigation<ShowingNow>();
+            Container.RegisterTypeForNavigation<Categories>();
+            Container.RegisterTypeForNavigation<ShowingNowNavigationPage>();
+            Container.RegisterTypeForNavigation<CategoriesNavigationPage>();
         }
     }
 }

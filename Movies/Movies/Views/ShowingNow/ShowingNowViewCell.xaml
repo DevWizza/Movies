@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Movies.Views.ShowingNowViewCell">
+  <ViewCell.View>
+        <StackLayout BackgroundColor="ForestGreen"
+                     Padding="20,28,30,30" 
+                     Margin="0,10"
+                     Spacing="10">
+
+            <StackLayout
+                Padding="0,0,0,80"
+                HorizontalOptions="FillAndExpand">
+
+                <Label
+                    Text="Thriller"
+                    FontSize="12"
+                    TextColor="White"
+                    HorizontalOptions="EndAndExpand"/>
+                
+            </StackLayout>
+
+            <StackLayout>
+
+                <Label
+                    Text="PG-13"
+                    TextColor="White"
+                    FontSize="12"/>
+
+                <Label
+                    Text="IT"
+                    TextColor="White"
+                    FontSize="30"/>
+
+
+            </StackLayout>
+            
+
+        </StackLayout>
+  </ViewCell.View>
+</ViewCell>
