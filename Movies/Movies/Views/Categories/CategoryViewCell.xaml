@@ -12,6 +12,7 @@
             Aspect="AspectFill"
             DownsampleToViewSize="true"
             Source="{Binding Image}"
+            LoadingPlaceholder="loadingplaceholder"
             RelativeLayout.XConstraint =
       "{ConstraintExpression Type=RelativeToParent,
                              Property=X,

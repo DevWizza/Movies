@@ -170,6 +170,16 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_star_white.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_star_border_white.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_star_white.png" />
+    <AndroidResource Include="Resources\drawable\americanmade.png" />
+    <AndroidResource Include="Resources\drawable\scarymovie.png" />
+    <AndroidResource Include="Resources\drawable\toystory3.png" />
+    <AndroidResource Include="Resources\drawable\wonderwoman.png" />
+    <AndroidResource Include="Resources\drawable\loadingplaceholder.jpg" />
+    <AndroidResource Include="Resources\drawable\action.png" />
+    <AndroidResource Include="Resources\drawable\documentary.png" />
+    <AndroidResource Include="Resources\drawable\drama.png" />
+    <AndroidResource Include="Resources\drawable\fantasy.png" />
+    <AndroidResource Include="Resources\drawable\thriller.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

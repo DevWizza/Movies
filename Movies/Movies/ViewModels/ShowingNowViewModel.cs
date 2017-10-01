@@ -50,7 +50,7 @@ namespace Movies.ViewModels
                     Title = "IT",
                     Genre = "Thriller",
                     Rating = "PG-13",
-                    Image = "https://cdn.pixabay.com/photo/2017/08/19/10/00/eagle-2657888_960_720.jpg"
+                    Image = "scarymovie"
                 },
                 new Movie
                 {
@@ -59,7 +59,7 @@ namespace Movies.ViewModels
                     Title = "Wonder Woman",
                     Genre = "Fantasy",
                     Rating = "PG-13",
-                    Image = "https://cdn.pixabay.com/photo/2017/08/23/08/33/cats-eyes-2671903_960_720.jpg"
+                    Image = "wonderwoman"
                 },
                 new Movie
                 {
@@ -68,7 +68,16 @@ namespace Movies.ViewModels
                     Title = "Toy Story 3",
                     Genre = "Fantasy",
                     Rating = "G",
-                    Image = "https://cdn.pixabay.com/photo/2017/04/06/09/37/toy-2207781_960_720.jpg"
+                    Image = "toystory3"
+                },
+                new Movie
+                {
+                    Id = 3,
+                    Score = 5,
+                    Title = "American Made",
+                    Genre = "Drama",
+                    Rating = "R",
+                    Image = "americanmade"
                 }
             };
 

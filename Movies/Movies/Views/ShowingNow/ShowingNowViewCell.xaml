@@ -11,9 +11,9 @@
     <RelativeLayout>
 
     <ffimageloading:CachedImage
-            DownsampleToViewSize="false"
             Aspect="AspectFill"
             Source="{Binding Image}" 
+            LoadingPlaceholder="loadingplaceholder"
             RelativeLayout.XConstraint =
                             "{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
@@ -40,6 +40,30 @@
             </ffimageloading:CachedImage.Transformations>
 
             </ffimageloading:CachedImage>
+
+            <BoxView
+            Color="Black"
+            Opacity="0.4"
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0,
+                             Constant=200}"/>
            
    <StackLayout 
                RelativeLayout.XConstraint =
@@ -92,24 +116,23 @@
                     TextColor="White"
                     HorizontalOptions="EndAndExpand"/>
 
-                
-
                 </RelativeLayout>
                     
             </StackLayout>
 
-            <StackLayout>
+            <StackLayout Spacing="0">
 
                 <Label
                     Text="{Binding Rating}"
                     TextColor="White"
+                    FontAttributes="Bold"
                     FontSize="12"/>
 
                 <Label
                     Text="{Binding Title}"
                     TextColor="White"
                     FontAttributes="Bold"
-                    FontSize="30"/>
+                    FontSize="26"/>
 
 
             </StackLayout>
