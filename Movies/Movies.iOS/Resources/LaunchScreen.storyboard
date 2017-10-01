@@ -1,39 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="649">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="gAE-YM-kbH">
+        <scene sceneID="648">
             <objects>
-                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                <viewController id="649" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
-                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                        <viewControllerLayoutGuide type="top" id="646"/>
+                        <viewControllerLayoutGuide type="bottom" id="647"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="650">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="653" translatesAutoresizingMaskIntoConstraints="NO" image="splash_back.png">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="667" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="303.5" width="375" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="675" firstItem="667" firstAttribute="height" constant="60"/>
+                                </constraints>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
+                            <constraint id="654" firstItem="650" firstAttribute="centerY" secondItem="653" secondAttribute="centerY"/>
+                            <constraint id="655" firstItem="653" firstAttribute="centerX" secondItem="650" secondAttribute="centerX"/>
+                            <constraint id="656" firstItem="653" firstAttribute="height" secondItem="650" secondAttribute="height"/>
+                            <constraint id="657" firstItem="653" firstAttribute="width" secondItem="650" secondAttribute="width"/>
+                            <constraint id="668" firstItem="667" firstAttribute="centerY" secondItem="653" secondAttribute="centerY"/>
+                            <constraint id="669" firstItem="667" firstAttribute="centerX" secondItem="653" secondAttribute="centerX"/>
+                            <constraint id="676" firstItem="667" firstAttribute="width" secondItem="653" secondAttribute="width"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="651" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="349" y="339"/>
+            <point key="canvasLocation" x="225" y="-138"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="thatpinkthough.png" width="78" height="33"/>
+        <image name="ic_list_white.png" width="24" height="24"/>
+        <image name="ic_filter_list_white.png" width="24" height="24"/>
+        <image name="full_star" width="24" height="24"/>
+        <image name="empty_star" width="24" height="24"/>
+        <image name="action.png" width="375" height="211.5"/>
+        <image name="americanmade.png" width="960" height="540"/>
+        <image name="documentary.png" width="600" height="337.5"/>
+        <image name="drama.png" width="404.5" height="227.5"/>
+        <image name="fantasy.png" width="300" height="187.5"/>
+        <image name="loadingplaceholder.jpg" width="236" height="236"/>
+        <image name="thriller.png" width="704" height="317"/>
+        <image name="toystory3.png" width="640" height="360"/>
+        <image name="wonderwoman.png" width="660" height="330"/>
+        <image name="scarymovie.png" width="600" height="300"/>
+        <image name="splash_back.png" width="360" height="640"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina47"/>
+    </simulatedMetricsContainer>
 </document>

@@ -155,7 +155,6 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
@@ -180,6 +179,9 @@
     <AndroidResource Include="Resources\drawable\drama.png" />
     <AndroidResource Include="Resources\drawable\fantasy.png" />
     <AndroidResource Include="Resources\drawable\thriller.png" />
+    <AndroidResource Include="Resources\drawable\splash_back.png" />
+    <AndroidResource Include="Resources\drawable\movies.png" />
+    <AndroidResource Include="Resources\drawable\splash_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
