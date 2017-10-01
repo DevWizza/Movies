@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<xf:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Movies.Views.MoviesHomeTabbedPage"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
+             FixedMode="false"
+             BarTheme="DarkWithAlpha"
+             xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
              xmlns:screens="clr-namespace:Movies.Views;assembly=Movies"
-             BarBackgroundColor="Black"
-             BarTextColor="#DB0A5B">
+             BarTextColor="White"
+             BarBackgroundColor="Black">
 
     <screens:ShowingNowNavigationPage Title="{Binding ShowingNowTitle}" Icon="ic_list_white" BarTextColor="White">
         <x:Arguments>
@@ -20,4 +23,4 @@
         </x:Arguments>
     </screens:CategoriesNavigationPage>
 
-</TabbedPage>
+</xf:BottomBarPage>

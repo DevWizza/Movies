@@ -13,7 +13,7 @@
     <ffimageloading:CachedImage
             DownsampleToViewSize="false"
             Aspect="AspectFill"
-            Source="{Binding Image}"
+            Source="{Binding Image}" 
             RelativeLayout.XConstraint =
                             "{ConstraintExpression Type=RelativeToParent,
                              Property=Width,

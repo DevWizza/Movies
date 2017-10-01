@@ -21,6 +21,10 @@ namespace Movies.ViewModels
         public MoviesHomeTabbedPageViewModel(ShowingNowViewModel showingNowViewModel,
             CategoriesViewModel categoriesViewModel)
         {
+            ShowingNowTitle = "Showing Now";
+
+            CategoriesTitle = "Categories";
+
             ShowingNowViewModel = showingNowViewModel;
             CategoriesViewModel = categoriesViewModel;
         }
@@ -33,10 +37,6 @@ namespace Movies.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            ShowingNowTitle = "Showing Now";
-
-            CategoriesTitle = "Categories";
-
             ShowingNowViewModel.OnNavigatedTo(parameters);
             CategoriesViewModel.OnNavigatedTo(parameters);
         }
