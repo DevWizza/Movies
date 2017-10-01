@@ -73,8 +73,8 @@
                 <RelativeLayout
                         HorizontalOptions="EndAndExpand">
 
-                <controls:CircleImage 
-                        FillColor="#DB0A5B"
+                <Image
+                        Source="thatpinkthough"
                         Aspect="Fill"
                         HeightRequest="30"
                         WidthRequest="70"
