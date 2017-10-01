@@ -1,10 +1,87 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Movies.Views.Categories">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Categories!" />
+             x:Class="Movies.Views.Categories"
+             Title="Categories"
+             BackgroundColor="Black"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:viewcell="clr-namespace:Movies.Views;assembly=Movies">
+
+
+<RelativeLayout>
+
+        <StackLayout RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=X,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+        RelativeLayout.WidthConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+    RelativeLayout.HeightConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+            <ActivityIndicator Color="White"
+        IsRunning="{Binding IsLoading}"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"/>
+
         </StackLayout>
-    </ContentPage.Content>
+
+        <ListView
+             RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=X,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+        RelativeLayout.WidthConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+    RelativeLayout.HeightConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}"
+        BackgroundColor="Black"
+        ItemsSource="{Binding Categories}"
+        SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+        SeparatorColor="Transparent"
+        RowHeight="110"
+        HasUnevenRows="false"
+        SeparatorVisibility="None"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <viewcell:CategoryViewCell/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Behaviors>
+                <prismBehaviors:EventToCommandBehavior EventName="ItemSelected"
+                Command="{Binding SelectedCommand}" EventArgsParameterPath="SelectedItem"/>
+            </ListView.Behaviors>
+        </ListView>
+
+</RelativeLayout>
+
+    
 </ContentPage>

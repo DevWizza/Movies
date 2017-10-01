@@ -71,6 +71,7 @@
                 HorizontalOptions="FillAndExpand">
 
                 <RelativeLayout
+                        x:Name="GenreLayout"
                         HorizontalOptions="EndAndExpand">
 
                 <Image

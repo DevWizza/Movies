@@ -160,6 +160,16 @@
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\thatpinkthough.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_star_border_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_star_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_star_border_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_star_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_star_border_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_star_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_star_border_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_star_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_star_border_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_star_white.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

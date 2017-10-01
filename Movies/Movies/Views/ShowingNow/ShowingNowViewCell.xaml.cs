@@ -16,5 +16,12 @@ namespace Movies.Views
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            GenreLayout.ForceLayout();
+        }
     }
 }
