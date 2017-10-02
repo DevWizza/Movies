@@ -16,7 +16,7 @@ namespace Movies
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync($"{Screens.HomeTabsContainer}");
+            NavigationService.NavigateAsync(new Uri($"{Screens.AbsoluteURI}/{Screens.MoviesHomeTabbedPage}/{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}", UriKind.Absolute));
         }
 
         protected override void RegisterTypes()
@@ -24,6 +24,7 @@ namespace Movies
             Container.RegisterTypeForNavigation<MoviesHomeTabbedPage>();
             Container.RegisterTypeForNavigation<ShowingNow>();
             Container.RegisterTypeForNavigation<Categories>();
+            Container.RegisterTypeForNavigation<MovieDetails>();
             Container.RegisterTypeForNavigation<ShowingNowNavigationPage>();
             Container.RegisterTypeForNavigation<CategoriesNavigationPage>();
         }

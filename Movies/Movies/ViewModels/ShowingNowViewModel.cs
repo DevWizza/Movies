@@ -4,6 +4,7 @@ using Prism.Navigation;
 using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
+using System;
 
 namespace Movies.ViewModels
 {
@@ -17,17 +18,21 @@ namespace Movies.ViewModels
 
         public ICommand SelectedCommand { get; set; }
 
-        public ShowingNowViewModel()
+        readonly INavigationService _navigationService;
+
+        public ShowingNowViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
+
             SelectedCommand = new Command<Movie>(OnMovieSelected);
         }
 
-        private void OnMovieSelected(Movie movie)
+        private async void OnMovieSelected(Movie movie)
         {
             if (movie == null)
                 return;
 
-            //TODO: navigate to the detail
+            await _navigationService.NavigateAsync($"{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}/{Screens.MovieDetails}");
 
             SelectedMovie = null;
         }

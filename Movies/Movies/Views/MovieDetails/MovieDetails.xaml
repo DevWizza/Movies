@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Movies.Views.MovieDetails"
+    Title="Wonder Woman"
+    BackgroundColor="Black"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:viewcell="clr-namespace:Movies.Views;assembly=Movies">
+
+    <ScrollView VerticalOptions="StartAndExpand">
+        
+    <StackLayout Spacing="4">
+
+        <Image
+            Aspect="AspectFill"
+            Source="wonderwoman"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            HeightRequest="350"/>
+
+        <Label 
+            Margin="0,20,0,0"
+            HorizontalOptions="Center"
+            TextColor="White"
+            FontAttributes="Bold"
+            Text="Wonder Woman"
+            FontSize="30"/>
+
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="CenterAndExpand"
+            Spacing="10">
+
+            <StackLayout
+                Padding="10,10"
+                HorizontalOptions="StartAndExpand">
+
+                <RelativeLayout
+                        HorizontalOptions="FillAndExpand">
+
+                <Image
+                        Source="thatpinkthough"
+                        Aspect="Fill"
+                        HeightRequest="30"
+                        WidthRequest="70"
+                        HorizontalOptions="End"/>
+                        
+                <Label
+                    Text="PG-13"
+                    FontSize="12"
+                    WidthRequest="70"
+                    HeightRequest="30"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="EndAndExpand"/>
+
+                </RelativeLayout>
+                    
+            </StackLayout>
+
+            <StackLayout
+                Padding="10,10"
+                HorizontalOptions="CenterAndExpand">
+
+                <RelativeLayout
+                        HorizontalOptions="FillAndExpand">
+
+                <Image
+                        Source="thatpinkthough"
+                        Aspect="Fill"
+                        HeightRequest="30"
+                        WidthRequest="70"
+                        HorizontalOptions="End"/>
+                        
+                <Label
+                    Text="Sci-Fi"
+                    FontSize="12"
+                    WidthRequest="70"
+                    HeightRequest="30"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="EndAndExpand"/>
+
+                </RelativeLayout>
+                    
+            </StackLayout>
+
+            <StackLayout
+                Padding="10,10"
+                HorizontalOptions="EndAndExpand">
+
+                <RelativeLayout
+                        HorizontalOptions="FillAndExpand">
+
+                <Image
+                        Source="thatpinkthough"
+                        Aspect="Fill"
+                        HeightRequest="30"
+                        WidthRequest="70"
+                        HorizontalOptions="End"/>
+                        
+                <Label
+                    Text="Fantasy"
+                    FontSize="12"
+                    WidthRequest="70"
+                    HeightRequest="30"
+                    VerticalTextAlignment="Center"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    HorizontalOptions="EndAndExpand"/>
+
+                </RelativeLayout>
+                    
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout
+                Padding="20,0">
+
+        <Label
+            Margin="0,20"
+            Text="Story Line"
+            TextColor="White"
+            HorizontalOptions="StartAndExpand"/>
+
+        <Label
+            Text="In present-day Paris, Diana Prince receives a photographic plate of herself during World War I, which prompts her to recall her past. The daughter of Queen Hippolyta, Diana was raised on the hidden island of Themyscira, home to the Amazonian race of warrior women created by Zeus to protect mankind."
+            TextColor="White"
+            FontAttributes="Bold"
+            HorizontalOptions="StartAndExpand"/>
+
+        </StackLayout>
+                
+        <Label
+            Margin="0,20"
+            Text="Photos"
+            TextColor="White"
+            HorizontalOptions="StartAndExpand"/>
+
+        <!--<ScrollView 
+            Orientation="Horizontal">
+
+            
+
+        </ScrollView>-->
+
+            <Label
+            Margin="0,20"
+            Text="The Cast"
+            TextColor="White"
+            HorizontalOptions="StartAndExpand"/>
+
+
+            <!--<ScrollView 
+            Orientation="Horizontal">
+
+            
+
+        </ScrollView>-->
+
+            <StackLayout
+                Padding="20,0,20,20">
+
+            <Label
+                Margin="0,20"
+                Text="How Do I Watch This?"
+                FontAttributes="Bold"
+                TextColor="White"
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label
+                Text="In order to watch this movie you need to purchase or rent it first. Your device is compatible for local streaming."
+                TextColor="White"
+                FontAttributes="Bold"
+                HorizontalOptions="StartAndExpand"/>
+
+            </StackLayout>
+            
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
