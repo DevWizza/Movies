@@ -19,4 +19,15 @@ namespace Movies
 
         public readonly static string MovieDetails = nameof(MovieDetails);
     }
+
+    public class NavigationParametersKey
+    {
+        public readonly static string SelectedMovieId = nameof(SelectedMovieId);
+    }
+
+    public class ProjectJSONPaths
+    {
+        //assembly/folder/fileName.{extension}
+        public readonly static string MoviesJSON = "Movies.MoviesJSON.movies.json";
+    }
 }

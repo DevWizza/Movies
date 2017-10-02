@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 using System;
+using Movies.Services;
 
 namespace Movies.ViewModels
 {
@@ -20,8 +21,13 @@ namespace Movies.ViewModels
 
         readonly INavigationService _navigationService;
 
-        public ShowingNowViewModel(INavigationService navigationService)
+        readonly IMovieService _movieService;
+
+        public ShowingNowViewModel(INavigationService navigationService, 
+                                   IMovieService movieService)
         {
+            _movieService = movieService;
+
             _navigationService = navigationService;
 
             SelectedCommand = new Command<Movie>(OnMovieSelected);
@@ -42,49 +48,11 @@ namespace Movies.ViewModels
              
         }
 
-        public void OnNavigatedTo(NavigationParameters parameters)
+        public async void OnNavigatedTo(NavigationParameters parameters)
         {
             IsLoading = true;
 
-            Movies = new List<Movie>
-            {
-                new Movie
-                {
-                    Id = 0,
-                    Score = 4,
-                    Title = "IT",
-                    Genre = "Thriller",
-                    Rating = "PG-13",
-                    Image = "scarymovie"
-                },
-                new Movie
-                {
-                    Id = 1,
-                    Score = 5,
-                    Title = "Wonder Woman",
-                    Genre = "Fantasy",
-                    Rating = "PG-13",
-                    Image = "wonderwoman"
-                },
-                new Movie
-                {
-                    Id = 2,
-                    Score = 2,
-                    Title = "Toy Story 3",
-                    Genre = "Fantasy",
-                    Rating = "G",
-                    Image = "toystory3"
-                },
-                new Movie
-                {
-                    Id = 3,
-                    Score = 5,
-                    Title = "American Made",
-                    Genre = "Drama",
-                    Rating = "R",
-                    Image = "americanmade"
-                }
-            };
+            Movies = await _movieService.GetMoviesAsync();
 
             IsLoading = false;
         }

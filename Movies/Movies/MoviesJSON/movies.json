@@ -1,0 +1,83 @@
+﻿[
+
+    {
+        "Id": 0,
+        "Image": "scarymovie",
+        "FrameImage": null,
+        "Title": "IT",
+        "Genre": "Thriller",
+        "Rating": "PG-13",
+        "Score": 4,
+        "TicketCost": 14,
+        "Actors": [
+            "",
+            "",
+            ""
+        ],
+        "Photos": [
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "Id": 1,
+        "Image": "wonderwoman",
+        "FrameImage": null,
+        "Title": "Wonder Woman",
+        "Genre": "Fantasy",
+        "Rating": "PG-13",
+        "Score": 5,
+        "TicketCost": 20,
+        "Actors": [
+            "",
+            "",
+            ""
+        ],
+        "Photos": [
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "Id": 2,
+        "Image": "toystory3",
+        "FrameImage": null,
+        "Title": "Toy Story 3",
+        "Genre": "Fantasy",
+        "Rating": "G",
+        "Score": 2,
+        "TicketCost": 16,
+        "Actors": [
+            "",
+            "",
+            ""
+        ],
+        "Photos": [
+            "",
+            "",
+            ""
+        ]
+    },
+    {
+        "Id": 3,
+        "Image": "americanmade",
+        "FrameImage": null,
+        "Title": "American Made",
+        "Genre": "Drama",
+        "Rating": "R",
+        "Score": 5,
+        "TicketCost": 20,
+        "Actors": [
+            "",
+            "",
+            ""
+        ],
+        "Photos": [
+            "",
+            "",
+            ""
+        ]
+    }
+]

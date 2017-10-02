@@ -142,13 +142,9 @@
 
 
             </StackLayout>
-            
-
+        
         </StackLayout>
-
-
-
-            
+                    
     </RelativeLayout>
   </ViewCell.View>
 </ViewCell>
