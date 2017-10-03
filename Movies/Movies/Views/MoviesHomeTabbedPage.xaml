@@ -23,4 +23,10 @@
         </x:Arguments>
     </screens:CategoriesNavigationPage>
 
+    <screens:CategoriesNavigationPage Title="{Binding AboutMeTitle}" Icon="ic_info_outline_white">
+    <x:Arguments>
+        <screens:AboutMe BindingContext="{Binding AboutMeViewModel}"/>
+    </x:Arguments>
+    </screens:CategoriesNavigationPage>
+
 </xf:BottomBarPage>

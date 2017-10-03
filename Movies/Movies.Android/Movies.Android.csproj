@@ -222,6 +222,13 @@
     <AndroidResource Include="Resources\drawable\jeremy.jpg" />
     <AndroidResource Include="Resources\drawable\sophia.jpg" />
     <AndroidResource Include="Resources\drawable\scarymovie.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_info_outline_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_info_outline_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_info_outline_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_info_outline_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_info_outline_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

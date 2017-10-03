@@ -34,6 +34,8 @@ namespace Movies
             Container.RegisterTypeForNavigation<Categories>();
             Container.RegisterTypeForNavigation<SearchResults>();
             Container.RegisterTypeForNavigation<MovieDetails>();
+            Container.RegisterTypeForNavigation<AboutMe>();
+            Container.RegisterTypeForNavigation<AboutMeNavigationPage>();
             Container.RegisterTypeForNavigation<ShowingNowNavigationPage>();
             Container.RegisterTypeForNavigation<CategoriesNavigationPage>();
         }
