@@ -192,7 +192,7 @@
                         Aspect = "AspectFill"
                         Source = "{Binding .}"
                         WidthRequest = "200"
-                        HeightRequest = "100"/>
+                        HeightRequest = "200"/>
                     </DataTemplate>
                 </movieControls:PicturesHorizontalScroller.DataTemplate>
             </movieControls:PicturesHorizontalScroller>
@@ -213,6 +213,7 @@
                             Padding="0,0,10,0">
 
                             <circledImage:CircleImage
+                                    
                                 Aspect = "AspectFill"
                                 Source = "{Binding Image}"
                                 WidthRequest = "100"
@@ -326,6 +327,7 @@
                              Constant=0}">
 
                      <StackLayout
+                        VerticalOptions="FillAndExpand"
                         Orientation="Horizontal">
 
                         <StackLayout
@@ -360,7 +362,8 @@
                         </StackLayout>
 
                         <StackLayout
-                            HorizontalOptions="FillAndExpand">
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
 
                         <Button
                             HorizontalOptions="EndAndExpand"
