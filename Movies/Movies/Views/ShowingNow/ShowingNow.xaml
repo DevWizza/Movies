@@ -64,6 +64,7 @@
         ItemsSource="{Binding Movies}"
         SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
         SeparatorColor="Transparent"
+        BackgroundColor="Transparent"
         RowHeight="214"
         HasUnevenRows="false"
         SeparatorVisibility="None"
