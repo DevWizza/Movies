@@ -43,6 +43,8 @@ namespace Movies.Services
 
         async Task Init()
         {
+            await Task.Delay(1000);
+
             _movies = await _jsonReaderService.GetStringAsJsonObjectAsync<IList<Movie>>(ProjectJSONPaths.MoviesJSON);
         }
     }

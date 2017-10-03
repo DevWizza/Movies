@@ -14,8 +14,6 @@ namespace Movies.ViewModels
     {
         public bool IsLoading { get; set; }
 
-        public bool IsDoingSearch { get; set; }
-
         public Movie SelectedMovie { get; set; }
 
         public IList<Movie> Movies { get; set; }
@@ -61,8 +59,6 @@ namespace Movies.ViewModels
             IsLoading = true;
 
             Movies = await _movieService.GetMoviesAsync();
-
-            IsDoingSearch = false;
 
             IsLoading = false;
         }

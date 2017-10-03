@@ -61,7 +61,6 @@
                              Factor=1,
                              Constant=0}"
         Margin="0,10,0,0"
-        BackgroundColor="Black"
         ItemsSource="{Binding Movies}"
         SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
         SeparatorColor="Transparent"

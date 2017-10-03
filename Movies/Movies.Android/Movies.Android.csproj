@@ -170,7 +170,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\empty_star.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\full_star.png" />
     <AndroidResource Include="Resources\drawable\americanmade.png" />
-    <AndroidResource Include="Resources\drawable\scarymovie.png" />
     <AndroidResource Include="Resources\drawable\toystory3.png" />
     <AndroidResource Include="Resources\drawable\wonderwoman.png" />
     <AndroidResource Include="Resources\drawable\loadingplaceholder.jpg" />
@@ -222,6 +221,7 @@
     <AndroidResource Include="Resources\drawable\jaeden.jpg" />
     <AndroidResource Include="Resources\drawable\jeremy.jpg" />
     <AndroidResource Include="Resources\drawable\sophia.jpg" />
+    <AndroidResource Include="Resources\drawable\scarymovie.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

@@ -13,8 +13,37 @@
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
     <RelativeLayout>
+
+        <StackLayout RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=X,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+        RelativeLayout.WidthConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+    RelativeLayout.HeightConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+            <ActivityIndicator Color="White"
+        IsRunning="{Binding IsLoading}"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
           
     <ScrollView
+            IsVisible="{Binding ShowControls}"
             VerticalOptions="StartAndExpand"
             RelativeLayout.XConstraint =
                             "{ConstraintExpression Type=RelativeToParent,
@@ -39,7 +68,7 @@
             Padding="0,0,0,100">
         
     <StackLayout 
-            Spacing="4">
+            Spacing="0">
 
         <ffimageloading:CachedImage
             DownsampleToViewSize="true"
@@ -156,10 +185,9 @@
         </StackLayout>
 
         <StackLayout
-                Padding="20,0">
+                Padding="20,20,20,0">
 
         <Label
-            Margin="0,20"
             Text="Story Line"
             TextColor="White"
             FontSize="14"
@@ -179,6 +207,7 @@
             Margin="20"
             Text="Photos"
             TextColor="White"
+            FontAttributes="Bold"
             FontSize="14"
             HorizontalOptions="StartAndExpand"/>
 
@@ -201,6 +230,7 @@
                 Margin="20"
                 Text="The Cast"
                 FontSize="14"
+                FontAttributes="Bold"
                 TextColor="White"
                 HorizontalOptions="StartAndExpand"/>
 
@@ -231,10 +261,9 @@
             </movieControls:PicturesHorizontalScroller>
             
             <StackLayout
-                Padding="20,0,20,20">
+                Padding="20">
 
             <Label
-                Margin="0,20"
                 Text="How Do I Watch This?"
                 FontAttributes="Bold"
                 FontSize="14"
@@ -254,6 +283,7 @@
     </ScrollView>
 
     <RelativeLayout
+            IsVisible="{Binding ShowControls}"
             RelativeLayout.XConstraint =
                             "{ConstraintExpression Type=RelativeToParent,
                              Property=Width,
@@ -371,8 +401,9 @@
                             BackgroundColor="Transparent"
                             BorderColor="White"
                             TextColor="White"
-                            FontSize="14"
-                            Text="Select Seats"/>
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="Order Tickets!"/>
 
                         </StackLayout>
                      </StackLayout>

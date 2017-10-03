@@ -12,6 +12,10 @@ namespace Movies.ViewModels
 
         public Movie SelectedMovie { get; set; }
 
+        public bool IsLoading { get; set; }
+
+        public bool ShowControls { get; set; }
+
         public MovieDetailsViewModel(IMovieService movieService)
         {
             _movieService = movieService;
@@ -24,10 +28,18 @@ namespace Movies.ViewModels
 
         public async void OnNavigatedTo(NavigationParameters parameters)
         {
+            IsLoading = true;
+
+            ShowControls = false;
+
             if (parameters.TryGetValue(NavigationParametersKey.SelectedMovieId, out int selectedMovieId))
             {
                 SelectedMovie = await _movieService.GetMovieByIdAsync(selectedMovieId);
             }
+
+            IsLoading = false;
+
+            ShowControls = true;
         }
 
         public void OnNavigatingTo(NavigationParameters parameters)
