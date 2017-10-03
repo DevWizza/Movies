@@ -1,20 +1,23 @@
-﻿using Movies.Models;
-using Prism.Mvvm;
-using Prism.Navigation;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Xamarin.Forms;
-using System;
+using Movies.Models;
 using Movies.Services;
+using Prism.Mvvm;
+using Prism.Navigation;
+using Xamarin.Forms;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Movies.ViewModels
 {
-    public class ShowingNowViewModel : BindableBase, INavigationAware
+    public class SearchResultsViewModel : BindableBase, INavigationAware
     {
         public bool IsLoading { get; set; }
 
         public bool IsDoingSearch { get; set; }
+
+        public bool IfNoResult { get; set; }
 
         public Movie SelectedMovie { get; set; }
 
@@ -28,7 +31,9 @@ namespace Movies.ViewModels
 
         readonly IMovieService _movieService;
 
-        public ShowingNowViewModel(INavigationService navigationService, 
+        public string Title { get; set; }
+
+        public SearchResultsViewModel(INavigationService navigationService,
                                    IMovieService movieService)
         {
             _movieService = movieService;
@@ -38,7 +43,8 @@ namespace Movies.ViewModels
             SelectedCommand = new Command<Movie>(OnMovieSelected);
         }
 
-        private async void OnMovieSelected(Movie movie)
+
+        async void OnMovieSelected(Movie movie)
         {
             if (movie == null)
                 return;
@@ -46,24 +52,35 @@ namespace Movies.ViewModels
             var navigationParameters = new NavigationParameters();
             navigationParameters.Add(NavigationParametersKey.SelectedMovieId, movie.Id);
 
-            await _navigationService.NavigateAsync($"{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}/{Screens.MovieDetails}", navigationParameters);
+            await _navigationService.NavigateAsync($"{Screens.MovieDetails}", navigationParameters);
 
             SelectedMovie = null;
         }
 
+
         public void OnNavigatedFrom(NavigationParameters parameters)
         {
-             
+            
         }
 
         public async void OnNavigatedTo(NavigationParameters parameters)
         {
             IsLoading = true;
 
-            Movies = await _movieService.GetMoviesAsync();
+            if (parameters.TryGetValue(NavigationParametersKey.SelectedCategoryId, out string selectedCategoryId))
+            {
+                Movies = await _movieService.GetMoviesByCategory(selectedCategoryId);
 
-            IsDoingSearch = false;
+                IsDoingSearch = true;
 
+                var howManyMoviesFound = Movies.Count();
+
+                IfNoResult = howManyMoviesFound == 0;
+
+                Title = (howManyMoviesFound == 0 ? "No" : howManyMoviesFound.ToString()) + " Results";
+
+                SearchResult = $"Showing results for “{selectedCategoryId}” movies.";
+            }
             IsLoading = false;
         }
 

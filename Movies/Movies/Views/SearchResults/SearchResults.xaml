@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Movies.Views.SearchResults"
+    Title="{Binding Title}"
+    BackgroundColor="Black"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:viewcell="clr-namespace:Movies.Views;assembly=Movies">
+
+    <RelativeLayout>
+
+        <StackLayout
+            RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=X,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+        RelativeLayout.WidthConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+    RelativeLayout.HeightConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+        <Label
+            IsVisible="{Binding IfNoResult}"
+            FontSize="50"
+            TextColor="White"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="No Results :("/>
+
+        </StackLayout>
+        
+
+        <StackLayout RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=X,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+        RelativeLayout.WidthConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+    RelativeLayout.HeightConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+            <ActivityIndicator Color="White"
+        IsRunning="{Binding IsLoading}"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand"/>
+
+        </StackLayout>
+
+        <StackLayout
+            RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=X,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+        RelativeLayout.WidthConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+    RelativeLayout.HeightConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+     <Label
+            IsVisible="{Binding IsDoingSearch}"
+            Margin="20,0"
+            TextColor="White"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="{Binding SearchResult}"/>
+
+    <ListView
+        Margin="0,10,0,0"
+        BackgroundColor="Transparent"
+        ItemsSource="{Binding Movies}"
+        SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"
+        SeparatorColor="Transparent"
+        RowHeight="214"
+        HasUnevenRows="false"
+        SeparatorVisibility="None"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <viewcell:ShowingNowViewCell/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.Behaviors>
+                <prismBehaviors:EventToCommandBehavior EventName="ItemSelected"
+                Command="{Binding SelectedCommand}" EventArgsParameterPath="SelectedItem"/>
+            </ListView.Behaviors>
+        </ListView>
+
+        </StackLayout>
+
+    </RelativeLayout>
+
+
+    
+</ContentPage>

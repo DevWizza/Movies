@@ -32,6 +32,7 @@ namespace Movies
             Container.RegisterTypeForNavigation<MoviesHomeTabbedPage>();
             Container.RegisterTypeForNavigation<ShowingNow>();
             Container.RegisterTypeForNavigation<Categories>();
+            Container.RegisterTypeForNavigation<SearchResults>();
             Container.RegisterTypeForNavigation<MovieDetails>();
             Container.RegisterTypeForNavigation<ShowingNowNavigationPage>();
             Container.RegisterTypeForNavigation<CategoriesNavigationPage>();

@@ -22,17 +22,24 @@ namespace Movies.ViewModels
 
         public ICommand SelectedCommand { get; set; }
 
-        public CategoriesViewModel()
+        readonly INavigationService _navigationService;
+
+        public CategoriesViewModel(INavigationService navigationService)
         {
+            _navigationService = navigationService;
+
             SelectedCommand = new Command<Category>(OnCategorySelected);
         }
 
-        void OnCategorySelected(Category category)
+        async void OnCategorySelected(Category category)
         {
             if (category == null)
                 return;
 
-            //TODO: navigate to the detail
+            var navigationParameters = new NavigationParameters();
+            navigationParameters.Add(NavigationParametersKey.SelectedCategoryId, category.Title);
+
+            await _navigationService.NavigateAsync($"{Screens.CategoriesNavigationPage}/{Screens.Categories}/{Screens.SearchResults}", navigationParameters);
 
             SelectedCategory = null;
         }

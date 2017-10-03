@@ -10,5 +10,7 @@ namespace Movies.Services
         Task<IList<Movie>> GetMoviesAsync();
 
         Task<Movie> GetMovieByIdAsync(int identifier);
+
+        Task<IList<Movie>> GetMoviesByCategory(string selectedCategoryId);
     }
 }

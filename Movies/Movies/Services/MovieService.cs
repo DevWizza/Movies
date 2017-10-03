@@ -33,6 +33,14 @@ namespace Movies.Services
             return _movies;
         }
 
+        public async Task<IList<Movie>> GetMoviesByCategory(string selectedCategoryId)
+        {
+            if (_movies == null)
+                await Init();
+
+            return new List<Movie>(_movies.Where(movie => movie.Genre.Equals(selectedCategoryId)));
+        }
+
         async Task Init()
         {
             _movies = await _jsonReaderService.GetStringAsJsonObjectAsync<IList<Movie>>(ProjectJSONPaths.MoviesJSON);
