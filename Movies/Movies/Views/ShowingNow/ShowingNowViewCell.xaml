@@ -34,13 +34,7 @@
                             "{ConstraintExpression Type=RelativeToParent,
                              Property=Height,
                              Factor=0,
-                             Constant=200}">
-
-             <ffimageloading:CachedImage.Transformations>
-                <fftransformations:RoundedTransformation Radius="4"/>
-            </ffimageloading:CachedImage.Transformations>
-
-            </ffimageloading:CachedImage>
+                             Constant=214}"/>
 
             <BoxView
             Color="Black"
@@ -64,7 +58,7 @@
                             "{ConstraintExpression Type=RelativeToParent,
                              Property=Height,
                              Factor=0,
-                             Constant=200}"/>
+                             Constant=214}"/>
            
    <StackLayout 
                RelativeLayout.XConstraint =

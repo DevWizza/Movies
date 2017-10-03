@@ -12,9 +12,9 @@ namespace Movies.Models
 
         public string Image { get; set; }
 
-        public string FrameImage { get; set; }
-
         public string Title { get; set; }
+
+        public string Description { get; set; }
 
         public string Genre { get; set; }
 
@@ -23,6 +23,10 @@ namespace Movies.Models
         public int Score { get; set; }
 
         public int TicketCost { get; set; }
+
+        public string PeoplesOpinion { get; set; }
+
+        public string MyOpinion { get; set; }
 
         public IEnumerable<Actor> Actors { get; set; }
 

@@ -3,12 +3,14 @@
     {
         "Id": 0,
         "Image": "scarymovie",
-        "FrameImage": null,
         "Title": "IT",
         "Genre": "Thriller",
-        "Rating": "PG-13",
-        "Score": 4,
+        "Rating": "R",
+        "Description": "New Line Cinema's horror thriller IT, directed by Andy Muschietti ('Mama'), is based on the hugely popular Stephen King novel of the same name, which has been terrifying readers for decades. When children begin to disappear in the town of Derry, Maine, a group of young kids are faced with their biggest fears when they square off against an evil clown named Pennywise, whose history of murder and violence dates back for centuries.",
+        "Score": 2,
         "TicketCost": 14,
+        "PeoplesOpinion": "Scary",
+        "MyOpinion": "Average",
         "Actors": [
             "",
             "",
@@ -23,32 +25,49 @@
     {
         "Id": 1,
         "Image": "wonderwoman",
-        "FrameImage": null,
         "Title": "Wonder Woman",
+        "Description": "An Amazon princess (Gal Gadot) finds her idyllic life on an island occupied only by female warriors interrupted when a pilot (Chris Pine) crash-lands nearby. After rescuing him, she learns that World War I is engulfing the planet, and vows to use her superpowers to restore peace. Directed by Patty Jenkins (Monster).",
         "Genre": "Fantasy",
         "Rating": "PG-13",
-        "Score": 5,
+        "Score": 4,
         "TicketCost": 20,
+        "PeoplesOpinion": "Cool",
+        "MyOpinion": "Must-See",
         "Actors": [
-            "",
-            "",
-            ""
+            {
+                "image": "https://i.pinimg.com/736x/17/0b/e8/170be8c822995b88ba8a4a48cb95ecca--beautiful-smile-beautiful-children.jpg",
+                "name": "XYZ"
+            },
+            {
+                "image": "https://i.pinimg.com/736x/17/0b/e8/170be8c822995b88ba8a4a48cb95ecca--beautiful-smile-beautiful-children.jpg",
+                "name": "YXZ"
+            },
+            {
+                "image": "https://i.pinimg.com/736x/17/0b/e8/170be8c822995b88ba8a4a48cb95ecca--beautiful-smile-beautiful-children.jpg",
+                "name": "ZZZ"
+            },
+            {
+                "image": "https://i.pinimg.com/736x/17/0b/e8/170be8c822995b88ba8a4a48cb95ecca--beautiful-smile-beautiful-children.jpg",
+                "name": "YZZ"
+            }
         ],
         "Photos": [
-            "",
-            "",
-            ""
+            "wonderwoman",
+            "wonderwoman",
+            "wonderwoman"
         ]
     },
     {
         "Id": 2,
         "Image": "toystory3",
-        "FrameImage": null,
         "Title": "Toy Story 3",
         "Genre": "Fantasy",
+        "Description": "The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.",
         "Rating": "G",
-        "Score": 2,
+        "Score": 5,
         "TicketCost": 16,
+        "PeoplesOpinion": "Classic",
+        "MyOpinion": "Funny",
         "Actors": [
             "",
             "",
@@ -63,12 +82,14 @@
     {
         "Id": 3,
         "Image": "americanmade",
-        "FrameImage": null,
         "Title": "American Made",
         "Genre": "Drama",
         "Rating": "R",
-        "Score": 5,
+        "Description": "Barry Seal, a TWA pilot, is recruited by the CIA to provide reconnaissance on the burgeoning communist threat in Central America and soon finds himself in charge of one of the biggest covert CIA operations in the history of the United States that spawned the birth of the Medellin cartel and eventually almost brought down the Reagan White House with the Iran Contra scandal.",
+        "Score": 3,
         "TicketCost": 20,
+        "PeoplesOpinion": "Great",
+        "MyOpinion": "Awesome",
         "Actors": [
             "",
             "",

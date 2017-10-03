@@ -60,7 +60,7 @@
                              Property=Height,
                              Factor=1,
                              Constant=0}"
-        Margin="20,10,20,0"
+        Margin="0,10,0,0"
         BackgroundColor="Black"
         ItemsSource="{Binding Movies}"
         SelectedItem="{Binding SelectedMovie, Mode=TwoWay}"

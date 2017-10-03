@@ -182,6 +182,7 @@
     <AndroidResource Include="Resources\drawable\splash_back.png" />
     <AndroidResource Include="Resources\drawable\movies.png" />
     <AndroidResource Include="Resources\drawable\splash_background.xml" />
+    <AndroidResource Include="Resources\drawable\bottom_stripe_background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

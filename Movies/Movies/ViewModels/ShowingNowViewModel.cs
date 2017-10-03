@@ -38,7 +38,10 @@ namespace Movies.ViewModels
             if (movie == null)
                 return;
 
-            await _navigationService.NavigateAsync($"{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}/{Screens.MovieDetails}");
+            var navigationParameters = new NavigationParameters();
+            navigationParameters.Add(NavigationParametersKey.SelectedMovieId, movie.Id);
+
+            await _navigationService.NavigateAsync($"{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}/{Screens.MovieDetails}", navigationParameters);
 
             SelectedMovie = null;
         }

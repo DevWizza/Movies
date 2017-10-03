@@ -2,33 +2,67 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Movies.Views.MovieDetails"
-    Title="Wonder Woman"
+    Title="{Binding SelectedMovie.Title}"
     BackgroundColor="Black"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
     prism:ViewModelLocator.AutowireViewModel="True"
     xmlns:viewcell="clr-namespace:Movies.Views;assembly=Movies"
+    xmlns:movieControls="clr-namespace:Movies.Controls;assembly=Movies"
+    xmlns:circledImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
-    <ScrollView VerticalOptions="StartAndExpand">
+    <RelativeLayout>
+          
+    <ScrollView
+            VerticalOptions="StartAndExpand"
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}"
+            Padding="0,0,0,100">
         
-    <StackLayout Spacing="4">
+    <StackLayout 
+            Spacing="4">
 
         <ffimageloading:CachedImage
             DownsampleToViewSize="true"
             Aspect="AspectFill"
-            Source="wonderwoman"
+            Source="{Binding SelectedMovie.Image}"
             HorizontalOptions="FillAndExpand"
+            LoadingPlaceholder="loadingplaceholder"
             VerticalOptions="Start"
             HeightRequest="350"/>
 
-        <Label 
-            Margin="0,20,0,0"
+        <Label
+            Margin="0,10,0,0"
             HorizontalOptions="Center"
             TextColor="White"
             FontAttributes="Bold"
-            Text="Wonder Woman"
+            Text="{Binding SelectedMovie.Title}"
             FontSize="30"/>
+
+        <movieControls:StarRatingsControl
+                Margin="0,10,0,0"
+                HorizontalOptions="Center"
+                Score="{Binding SelectedMovie.Score}"
+                Padding="0,0,0,10"/>
 
         <StackLayout
             Orientation="Horizontal"
@@ -50,7 +84,7 @@
                         HorizontalOptions="End"/>
                         
                 <Label
-                    Text="PG-13"
+                    Text="{Binding SelectedMovie.MyOpinion}"
                     FontSize="12"
                     WidthRequest="70"
                     HeightRequest="30"
@@ -78,7 +112,7 @@
                         HorizontalOptions="End"/>
                         
                 <Label
-                    Text="Sci-Fi"
+                    Text="{Binding SelectedMovie.Genre}"
                     FontSize="12"
                     WidthRequest="70"
                     HeightRequest="30"
@@ -106,7 +140,7 @@
                         HorizontalOptions="End"/>
                         
                 <Label
-                    Text="Fantasy"
+                    Text="{Binding SelectedMovie.PeoplesOpinion}"
                     FontSize="12"
                     WidthRequest="70"
                     HeightRequest="30"
@@ -128,43 +162,73 @@
             Margin="0,20"
             Text="Story Line"
             TextColor="White"
+            FontSize="14"
             HorizontalOptions="StartAndExpand"/>
 
         <Label
-            Text="In present-day Paris, Diana Prince receives a photographic plate of herself during World War I, which prompts her to recall her past. The daughter of Queen Hippolyta, Diana was raised on the hidden island of Themyscira, home to the Amazonian race of warrior women created by Zeus to protect mankind."
+            Text="{Binding SelectedMovie.Description}"
             TextColor="White"
+            FontSize="14"
             FontAttributes="Bold"
             HorizontalOptions="StartAndExpand"/>
 
         </StackLayout>
-                
+
+            
         <Label
-            Margin="0,20"
+            Margin="20"
             Text="Photos"
             TextColor="White"
+            FontSize="14"
             HorizontalOptions="StartAndExpand"/>
 
-        <!--<ScrollView 
-            Orientation="Horizontal">
-
-            
-
-        </ScrollView>-->
+            <movieControls:PicturesHorizontalScroller
+                Pictures="{Binding SelectedMovie.Photos}">
+                <movieControls:PicturesHorizontalScroller.DataTemplate>
+                    <DataTemplate>
+                    <ffimageloading:CachedImage
+                        LoadingPlaceholder="loadingplaceholder"
+                        DownsampleToViewSize = "true"
+                        Aspect = "AspectFill"
+                        Source = "{Binding .}"
+                        WidthRequest = "200"
+                        HeightRequest = "100"/>
+                    </DataTemplate>
+                </movieControls:PicturesHorizontalScroller.DataTemplate>
+            </movieControls:PicturesHorizontalScroller>
 
             <Label
-            Margin="0,20"
-            Text="The Cast"
-            TextColor="White"
-            HorizontalOptions="StartAndExpand"/>
+                Margin="20"
+                Text="The Cast"
+                FontSize="14"
+                TextColor="White"
+                HorizontalOptions="StartAndExpand"/>
 
+            <movieControls:PicturesHorizontalScroller
+                Pictures="{Binding SelectedMovie.Actors}">
+                <movieControls:PicturesHorizontalScroller.DataTemplate>
+                    <DataTemplate>
 
-            <!--<ScrollView 
-            Orientation="Horizontal">
+                        <StackLayout
+                            Padding="0,0,10,0">
 
+                            <circledImage:CircleImage
+                                Aspect = "AspectFill"
+                                Source = "{Binding Image}"
+                                WidthRequest = "100"
+                                HeightRequest = "100"/>
+
+                            <Label
+                                Text="{Binding Name}"
+                                TextColor="White"
+                                HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+                        
+                    </DataTemplate>
+                </movieControls:PicturesHorizontalScroller.DataTemplate>
+            </movieControls:PicturesHorizontalScroller>
             
-
-        </ScrollView>-->
-
             <StackLayout
                 Padding="20,0,20,20">
 
@@ -172,6 +236,7 @@
                 Margin="0,20"
                 Text="How Do I Watch This?"
                 FontAttributes="Bold"
+                FontSize="14"
                 TextColor="White"
                 HorizontalOptions="StartAndExpand"/>
 
@@ -179,10 +244,136 @@
                 Text="In order to watch this movie you need to purchase or rent it first. Your device is compatible for local streaming."
                 TextColor="White"
                 FontAttributes="Bold"
+                FontSize="14"
                 HorizontalOptions="StartAndExpand"/>
 
             </StackLayout>
             
     </StackLayout>
     </ScrollView>
+
+    <RelativeLayout
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=-60}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0,
+                             Constant=60}">
+
+     <ffimageloading:CachedImage
+            DownsampleToViewSize="true"
+            Aspect="AspectFill"
+            Source="bottom_stripe_background"
+            HorizontalOptions="FillAndExpand"
+            LoadingPlaceholder="loadingplaceholder"
+            VerticalOptions="FillAndExpand"
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}"/>
+
+            <StackLayout
+                Padding="18,10"
+                RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+                     <StackLayout
+                        Orientation="Horizontal">
+
+                        <StackLayout
+                            HorizontalOptions="FillAndExpand">
+
+                        <StackLayout
+                            Spacing="4"
+                            Orientation="Horizontal">
+
+                <Label
+                    FontSize="16"
+                    Text="{Binding SelectedMovie.TicketCost, StringFormat='{0:c}'}"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"/>
+
+                <Label
+                    FontSize="12"
+                    Text="per person"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"/>
+
+                </StackLayout>
+
+                <Label
+                    FontSize="12"
+                    Text="25% discount today!"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
+
+                        </StackLayout>
+
+                        <StackLayout
+                            HorizontalOptions="FillAndExpand">
+
+                        <Button
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            BorderColor="White"
+                            TextColor="White"
+                            FontSize="14"
+                            Text="Select Seats"/>
+
+                        </StackLayout>
+                     </StackLayout>
+            </StackLayout>
+    </RelativeLayout>
+    </RelativeLayout>
 </ContentPage>
