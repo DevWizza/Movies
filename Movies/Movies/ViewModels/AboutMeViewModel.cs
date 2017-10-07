@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Windows.Input;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace Movies.ViewModels
 {
@@ -8,8 +10,16 @@ namespace Movies.ViewModels
     {
         public string ACoolPictureOfMe { get; set; }
 
+        public ICommand OpenPortfolioCommand { get; set; }
+
         public AboutMeViewModel()
         {
+            OpenPortfolioCommand = new Command(OnOpenPortfolio);
+        }
+
+        void OnOpenPortfolio()
+        {
+            Device.OpenUri(new Uri("https://luisalbertopenanunez.github.io/"));
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
