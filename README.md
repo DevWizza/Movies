@@ -1,9 +1,9 @@
-![LOGO](https://rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
+![LOGO](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
 ======================
 
 Buy movie tickets in advance, find movie times, and more at "Movies".
 
-![COVER](https://rawgit.com/DevWizza/Movies/develop/README/Cover.png?raw=true)
+![COVER](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Cover.png?raw=true)
 
 ## Table of content
 
@@ -31,7 +31,7 @@ Feel free to contribute to the project and add as many post as you want, but rem
 
 ## Preview
 
-![preview](URL)
+![preview](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Preview.png?raw=true)
 
 ## Licenses
 
