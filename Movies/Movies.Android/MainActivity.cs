@@ -24,7 +24,7 @@ namespace Movies.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             ImageCircleRenderer.Init();
-            CachedImageRenderer.Init();
+            CachedImageRenderer.Init(true);
 
             LoadApplication(new App());
         }

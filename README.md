@@ -1,33 +1,40 @@
 ![LOGO](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
 ======================
   
-Buy movie tickets in advance, find movie times, and more at "Movies".
+Buy movie tickets in advance, find movie times, and more in "Movies". 
   
 ![COVER](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Cover.png?raw=true)
  
 ## Table of content
  
 - [Running](#Running)
-- [Structure](#structure)
+- [Platforms](#platforms)
+- [Libraries](#libraries)
 - [Preview](#preview)
-- [Contributing](#contributing)
 
 ## Running
 
 In order to get "Movies" running all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
-
-## Structure
  
-There is an Android, iOS and PCL solution.
+## Platforms
+ 
+This project runs perfectly on Android and iOS.
 
 ![solution_screenshot](https://cdn.rawgit.com/DevWizza/Movies/develop/README/solution_screenshot.png?raw=true)
 
-Most of the work was done in the PCL solution because this project is renderer-free just like I promised. Although I would like to point out that in order to have a working splash screen in Android I had to do some work in the local Android project itself but that didn't have anything to do with renderers which is awesome too! If you are curious about how I did it no worries! I will post a tutorial on [Intern Life](https://www.intern.life/) on how I did it.
- 
-## Contributing
+Although UWP is listed in the solution it wasn't given support.
 
-There's no many rules in how to contribute because at the end of the day this is for learning purposes so feel free to contribute to the project as much as you want, but remember to create an <b>issue</b> first so everyone who wants to contribute on the future knows what you want to propose/implement and help you in the process of doing that. ☃
-  
+## Libraries
+
+Here are the libraries used that made this great learning resource possible.
+
+1) For loosely coupled code and easy MVVM navigation [Prism](https://github.com/PrismLibrary/Prism)
+2) For the bottom TabBar on Android: [BottomNavigationBarXF](https://github.com/thrive-now/BottomNavigationBarXF)
+3) For the circled images: [ImageCircle](https://github.com/jamesmontemagno/ImageCirclePlugin)
+4) For great performance when loading images: [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
+5) For cool INotifyPropertyChanged implementation: [Fody/PropertyChanged](https://github.com/Fody/PropertyChanged)
+6) For reading the local json file in the PCL solution: [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
+
 ## Preview
   
 This is what the app currently looks like. iOS on the left, Android on the right. ✌️

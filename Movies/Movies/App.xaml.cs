@@ -6,7 +6,9 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Movies.Services;
-using Microsoft.Practices.Unity;
+using Prism;
+using Prism.Ioc;
+using Prism.Navigation;
 
 namespace Movies
 {
@@ -18,33 +20,44 @@ namespace Movies
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync(new Uri($"{Screens.AbsoluteURI}/{Screens.MoviesHomeTabbedPage}/{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}", UriKind.Absolute));
+            var tabs = CreateTabs();
+
+            NavigationService.NavigateAsync(tabs);
         }
 
-        protected override void RegisterTypes()
+        private string CreateTabs()
         {
-            RegisterScreens();
-            RegisterServices();
+            var showingNowTab = $"{KnownNavigationParameters.CreateTab}={nameof(ShowingNowNavigationPage)}|{nameof(ShowingNow)}";
+            var categoriesTab = $"{KnownNavigationParameters.CreateTab}={nameof(CategoriesNavigationPage)}|{nameof(Categories)}";
+            var aboutMeTab = $"{KnownNavigationParameters.CreateTab}={nameof(AboutMeNavigationPage)}|{nameof(AboutMe)}";
+
+            return $"{nameof(MoviesHomeTabbedPage)}?{showingNowTab}&{categoriesTab}&{aboutMeTab}";
         }
 
-        void RegisterScreens()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<MoviesHomeTabbedPage>();
-            Container.RegisterTypeForNavigation<ShowingNow>();
-            Container.RegisterTypeForNavigation<Categories>();
-            Container.RegisterTypeForNavigation<SearchResults>();
-            Container.RegisterTypeForNavigation<MovieDetails>();
-            Container.RegisterTypeForNavigation<AboutMe>();
-            Container.RegisterTypeForNavigation<AboutMeNavigationPage>();
-            Container.RegisterTypeForNavigation<ShowingNowNavigationPage>();
-            Container.RegisterTypeForNavigation<CategoriesNavigationPage>();
+            RegisterScreens(containerRegistry);
+            RegisterServices(containerRegistry);
         }
 
-        void RegisterServices()
+        void RegisterScreens(IContainerRegistry containerRegistry)
         {
-            Container.RegisterType(typeof(IMovieService), typeof(MovieService));
-            Container.RegisterType(typeof(IJsonReaderService), typeof(JsonReaderService));
-            Container.RegisterType(typeof(IFileService), typeof(FileService));
+            containerRegistry.RegisterForNavigation<MoviesHomeTabbedPage>();
+            containerRegistry.RegisterForNavigation<ShowingNow>();
+            containerRegistry.RegisterForNavigation<Categories>();
+            containerRegistry.RegisterForNavigation<SearchResults>();
+            containerRegistry.RegisterForNavigation<MovieDetails>();
+            containerRegistry.RegisterForNavigation<AboutMe>();
+            containerRegistry.RegisterForNavigation<AboutMeNavigationPage>();
+            containerRegistry.RegisterForNavigation<ShowingNowNavigationPage>();
+            containerRegistry.RegisterForNavigation<CategoriesNavigationPage>();
+        }
+
+        void RegisterServices(IContainerRegistry containerRegistry)
+        {
+            containerRegistry.Register(typeof(IMovieService), typeof(MovieService));
+            containerRegistry.Register(typeof(IJsonReaderService), typeof(JsonReaderService));
+            containerRegistry.Register(typeof(IFileService), typeof(FileService));
         }
     }
 }

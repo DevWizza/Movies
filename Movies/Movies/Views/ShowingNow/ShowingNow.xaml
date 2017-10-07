@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Movies.Views.ShowingNow"
              Title="Showing Now"
+             Icon="ic_list_white"
              BackgroundColor="Black"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
