@@ -31,7 +31,7 @@ Feel free to contribute to the project and add as many post as you want, but rem
 
 ## Preview
 
-![preview](https://raw.githubusercontent.com/DevWizza/Movies/develop/README/Preview.png?raw=true)
+![preview](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Preview.png?raw=true)
 
 ## Licenses
 
