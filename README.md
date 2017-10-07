@@ -26,7 +26,7 @@ Most of the work was done in the PCL solution because this project is renderer-f
  
 ## Contributing
 
-There's no many rules in how to contribute because at the end of the day this is for learning purposes so feel free to contribute to the project as much as you want, but remember to create an <b>issue</b> first so everyone who wants to contribute on the future knows what you want to propose/implement and help you in the process of doing that. ☃
+No rules on how to contribute because at the end of the day this is for learning purposes so feel free to contribute to the project as much as you want and ask for help whenever you feel stuck.
   
 ## Preview
   
