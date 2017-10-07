@@ -14,7 +14,7 @@ Buy movie tickets in advance, find movie times, and more at "Movies".
 
 ## Set up
 
-In order to set this project all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed your computer you will be fine.
+In order to set this project up all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
 
 ## Structure
  
