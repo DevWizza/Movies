@@ -33,7 +33,7 @@ Feel free to contribute to the project and add as many post as you want, but rem
 
 ![preview](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Preview.png?raw=true)
 
-## License
+## License for only the code (Excluding assets)
 
 MIT License
 
