@@ -3,8 +3,143 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Movies.Views.AboutMe"
     BackgroundColor="Black"
-    Title="About Me">
+    Title="About Me"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
 
+    <RelativeLayout
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="CenterAndExpand">
     
+    <ffimageloading:CachedImage
+            DownsampleToViewSize="true"
+            Aspect="AspectFill"
+            Source="{Binding ACoolPictureOfMe}"
+            HorizontalOptions="FillAndExpand"
+            LoadingPlaceholder="loadingplaceholder"
+            VerticalOptions="FillAndExpand"
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}"/>
+
+        <BoxView
+            Color="Black"
+            Opacity="0.4"
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}"/>
+
+    <StackLayout
+            Margin="10,0,10,0"
+            VerticalOptions="FillAndExpand"
+            RelativeLayout.XConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.YConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Y,
+                             Factor=0,
+                             Constant=0}"
+            RelativeLayout.WidthConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=1,
+                             Constant=0}"
+            RelativeLayout.HeightConstraint =
+                            "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=1,
+                             Constant=0}">
+
+        <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand">
+
+                <Label
+            Text="Cross-Platform Developer"
+            FontSize="14"
+            HorizontalOptions="FillAndExpand"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="Center"
+            TextColor="White"/>
+
+        <Label
+            Text="Luis A. Peña Nuñez"
+            FontSize="50"
+            FontAttributes="Bold"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            TextColor="White"/>
+
+        <Label
+            Text="______"
+            FontSize="14"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center"
+            TextColor="White"/>
+                
+        <Label
+            WidthRequest="200"
+            Text="Cross-Platform Developer, Ketosis and UX expert."
+            FontSize="14"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="Center"
+            TextColor="White"/>
+
+        </StackLayout>
+
+        <Button
+            Margin="0,0,0,20"
+            VerticalOptions="End"
+            WidthRequest="170"
+            HorizontalOptions="Center"
+            BorderWidth="2"
+            BorderColor="White"
+            BackgroundColor="Transparent"
+            TextColor="White"
+            Text="Open Portfolio"/>
+
+        <StackLayout>
+        </StackLayout>
+    </StackLayout>
+    </RelativeLayout>
 </ContentPage>

@@ -6,6 +6,8 @@ namespace Movies.ViewModels
 {
     public class AboutMeViewModel : BindableBase, INavigationAware
     {
+        public string ACoolPictureOfMe { get; set; }
+
         public AboutMeViewModel()
         {
         }
@@ -17,7 +19,7 @@ namespace Movies.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            
+            ACoolPictureOfMe = "luis.png";
         }
 
         public void OnNavigatingTo(NavigationParameters parameters)

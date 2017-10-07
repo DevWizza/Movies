@@ -229,6 +229,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_info_outline_white.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_info_outline_white.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\luis.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
