@@ -7,14 +7,14 @@ Buy movie tickets in advance, find movie times, and more at "Movies".
  
 ## Table of content
  
-- [Set up](#installation)
+- [Running](#Running)
 - [Structure](#structure)
 - [Preview](#preview)
 - [Contributing](#contributing)
 
-## Set up
+## Running
 
-In order to set this project up all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
+In order to get "Movies" running all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
 
 ## Structure
  
@@ -30,6 +30,6 @@ There's no many rules in how to contribute because at the end of the day this is
   
 ## Preview
   
-This is what the app currently looks like. iOS on the left, Android on the right. 
+This is what the app currently looks like. iOS on the left, Android on the right. ✌️
   
 ![preview](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Preview.png?raw=true)
