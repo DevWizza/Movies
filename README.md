@@ -1,38 +1,35 @@
-![LOGO](https://rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
+![LOGO](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
 ======================
-
+  
 Buy movie tickets in advance, find movie times, and more at "Movies".
-
-![COVER](https://rawgit.com/DevWizza/Movies/develop/README/Cover.png?raw=true)
-
+  
+![COVER](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Cover.png?raw=true)
+ 
 ## Table of content
-
-- [Installation](#installation)
-    - [Dependencies](#dependencies)
-    - [Running](#running)
+ 
+- [Running](#Running)
 - [Structure](#structure)
 - [Preview](#preview)
 - [Contributing](#contributing)
-- [Licenses](#licenses)
 
-## Installation
+## Running
 
-### Dependencies 
+In order to get "Movies" running all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
 
-### Running
+## Structure
+ 
+There is an Android, iOS and PCL solution.
 
-# Structure
+![solution_screenshot](https://cdn.rawgit.com/DevWizza/Movies/develop/README/solution_screenshot.png?raw=true)
 
-[Coming soon...]
-
+Most of the work was done in the PCL solution because this project is renderer-free just like I promised. Although I would like to point out that in order to have a working splash screen in Android I had to do some work in the local Android project itself but that didn't have anything to do with renderers which is awesome too! If you are curious about how I did it no worries! I will post a tutorial on [Intern Life](https://www.intern.life/) on how I did it.
+ 
 ## Contributing
 
-Feel free to contribute to the project and add as many post as you want, but remember to create an <b>issue</b> first.
-
+There's no many rules in how to contribute because at the end of the day this is for learning purposes so feel free to contribute to the project as much as you want, but remember to create an <b>issue</b> first so everyone who wants to contribute on the future knows what you want to propose/implement and help you in the process of doing that. ☃
+  
 ## Preview
-
-![preview](URL)
-
-## Licenses
-
-Most of the files on this project are under [MIT License](https://en.wikipedia.org/wiki/MIT_License) with the exception of the files under the directory <b>root/assets</b> which has a different license type. Feel free to check the licensing files throughout the project if in doubt.
+  
+This is what the app currently looks like. iOS on the left, Android on the right. ✌️
+  
+![preview](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Preview.png?raw=true)
