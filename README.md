@@ -1,4 +1,4 @@
-![LOGO](https://rawgit.com/DevWizza/Movies/develop/Movies/Movies.Android/Resources/drawable-mdpi/icon.png?raw=true) 
+![LOGO](https://rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
 ======================
 
 Buy movie tickets in advance, find movie times, and more at "Movies".
