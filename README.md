@@ -11,11 +11,12 @@ Buy movie tickets in advance, find movie times, and more at "Movies".
 - [Structure](#structure)
 - [Preview](#preview)
 - [Contributing](#contributing)
+- [Share](#share)
 
 ## Running
 
 In order to get "Movies" running all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
-
+ 
 ## Structure
  
 There is an Android, iOS and PCL solution.
