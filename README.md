@@ -8,7 +8,7 @@ Buy movie tickets in advance, find movie times, and more in "Movies".
 ## Table of content
  
 - [Running](#Running)
-- [Structure](#structure)
+- [Platforms](#platforms)
 - [Libraries](#libraries)
 - [Tutorials](#tutorials)
 - [Preview](#preview)
@@ -17,13 +17,13 @@ Buy movie tickets in advance, find movie times, and more in "Movies".
 
 In order to get "Movies" running all you have to do is clone this in your local computer and open the solution. As long as you have Xamarin installed it will run.
  
-## Structure
+## Platforms
  
-There is an Android, iOS and PCL solution.
+This project runs perfectly on Android and iOS.
 
 ![solution_screenshot](https://cdn.rawgit.com/DevWizza/Movies/develop/README/solution_screenshot.png?raw=true)
 
-Most of the work was done in the PCL solution because 
+Although UWP is listed in the solution it wasn't given support.
 
 ## Libraries
 
@@ -38,7 +38,7 @@ Here are the libraries used that made this great learning resource possible.
 
 ## Tutorials
 
-I will cover the details of how it was done from the main entry point to the last bit of code running on my [personal blog](www.intern.life) so stay tuned! 🕺
+I will cover the details of how it was done on my [personal blog](www.intern.life) so stay tuned! 🕺
 
 ## Preview
   
