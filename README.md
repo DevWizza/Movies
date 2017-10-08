@@ -1,7 +1,7 @@
 ![LOGO](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Readme.png?raw=true) 
 ======================
   
-Buy movie tickets in advance, find movie times, and more at "Movies". 
+Buy movie tickets in advance, find movie times, and more in "Movies". 
   
 ![COVER](https://cdn.rawgit.com/DevWizza/Movies/develop/README/Cover.png?raw=true)
  
