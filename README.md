@@ -10,6 +10,7 @@ Buy movie tickets in advance, find movie times, and more at "Movies".
 - [Running](#Running)
 - [Structure](#structure)
 - [Libraries](#libraries)
+- [Tutorials](#tutorials)
 - [Preview](#preview)
 
 ## Running
@@ -22,7 +23,7 @@ There is an Android, iOS and PCL solution.
 
 ![solution_screenshot](https://cdn.rawgit.com/DevWizza/Movies/develop/README/solution_screenshot.png?raw=true)
 
-Most of the work was done in the PCL solution. Although I would like to point out that in order to have a working splash screen in Android I had to do some work in the local Android project itself but that didn't have anything to do with renderers which is awesome too! If you are curious about how I did it no worries! I will post a tutorial on [Intern Life](https://www.intern.life/) on how I did it.
+Most of the work was done in the PCL solution because 
 
 ## Libraries
 
@@ -33,6 +34,11 @@ Here are the libraries used that made this great learning resource possible.
 3) For the circled images: [ImageCircle](https://github.com/jamesmontemagno/ImageCirclePlugin)
 4) For great performance when loading images: [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
 5) For cool INotifyPropertyChanged implementation: [Fody/PropertyChanged](https://github.com/Fody/PropertyChanged)
+6) For reading the local json file in the PCL solution: [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
+
+## Tutorials
+
+I will cover the details of how it was done from the main entry point to the last bit of code running on my [personal blog](www.intern.life) so stay tuned! 🕺
 
 ## Preview
   
