@@ -10,7 +10,6 @@ Buy movie tickets in advance, find movie times, and more in "Movies".
 - [Running](#Running)
 - [Platforms](#platforms)
 - [Libraries](#libraries)
-- [Tutorials](#tutorials)
 - [Preview](#preview)
 
 ## Running
@@ -35,10 +34,6 @@ Here are the libraries used that made this great learning resource possible.
 4) For great performance when loading images: [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
 5) For cool INotifyPropertyChanged implementation: [Fody/PropertyChanged](https://github.com/Fody/PropertyChanged)
 6) For reading the local json file in the PCL solution: [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
-
-## Tutorials
-
-I will cover the details of how it was done on my [personal blog](www.intern.life) so stay tuned! 🕺
 
 ## Preview
   
