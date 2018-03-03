@@ -8,6 +8,7 @@ using Prism.Navigation;
 using Xamarin.Forms;
 using System.Linq;
 using System.Threading.Tasks;
+using Movies.Views;
 
 namespace Movies.ViewModels
 {
@@ -52,7 +53,7 @@ namespace Movies.ViewModels
             var navigationParameters = new NavigationParameters();
             navigationParameters.Add(NavigationParametersKey.SelectedMovieId, movie.Id);
 
-            await _navigationService.NavigateAsync($"{Screens.MovieDetails}", navigationParameters);
+            await _navigationService.NavigateAsync($"{nameof(MovieDetails)}", navigationParameters);
 
             SelectedMovie = null;
         }

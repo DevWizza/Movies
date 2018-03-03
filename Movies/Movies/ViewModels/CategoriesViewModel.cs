@@ -39,7 +39,7 @@ namespace Movies.ViewModels
             var navigationParameters = new NavigationParameters();
             navigationParameters.Add(NavigationParametersKey.SelectedCategoryId, category.Title);
 
-            await _navigationService.NavigateAsync($"{Screens.SearchResults}", navigationParameters);
+            await _navigationService.NavigateAsync($"{nameof(SearchResults)}", navigationParameters);
 
             SelectedCategory = null;
         }

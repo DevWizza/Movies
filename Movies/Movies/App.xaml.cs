@@ -27,11 +27,11 @@ namespace Movies
 
         private string CreateTabs()
         {
-            var showingNowTab = $"{KnownNavigationParameters.CreateTab}={Screens.ShowingNowNavigationPage}|{Screens.ShowingNow}";
-            var categoriesTab = $"{KnownNavigationParameters.CreateTab}={Screens.CategoriesNavigationPage}|{Screens.Categories}";
-            var aboutMeTab = $"{KnownNavigationParameters.CreateTab}={Screens.AboutMeNavigationPage}|{Screens.AboutMe}";
+            var showingNowTab = $"{KnownNavigationParameters.CreateTab}={nameof(ShowingNowNavigationPage)}|{nameof(ShowingNow)}";
+            var categoriesTab = $"{KnownNavigationParameters.CreateTab}={nameof(CategoriesNavigationPage)}|{nameof(Categories)}";
+            var aboutMeTab = $"{KnownNavigationParameters.CreateTab}={nameof(AboutMeNavigationPage)}|{nameof(AboutMe)}";
 
-            return $"{Screens.MoviesHomeTabbedPage}?{showingNowTab}&{categoriesTab}&{aboutMeTab}";
+            return $"{nameof(MoviesHomeTabbedPage)}?{showingNowTab}&{categoriesTab}&{aboutMeTab}";
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using System;
 using Movies.Services;
 using System.Linq;
+using Movies.Views;
 
 namespace Movies.ViewModels
 {
@@ -44,7 +45,7 @@ namespace Movies.ViewModels
             var navigationParameters = new NavigationParameters();
             navigationParameters.Add(NavigationParametersKey.SelectedMovieId, movie.Id);
 
-            await _navigationService.NavigateAsync($"{Screens.MovieDetails}", navigationParameters);
+            await _navigationService.NavigateAsync($"{nameof(MovieDetails)}", navigationParameters);
 
             SelectedMovie = null;
         }
