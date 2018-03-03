@@ -6,7 +6,8 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 using Movies.Services;
-using Microsoft.Practices.Unity;
+using Prism;
+using Prism.Ioc;
 
 namespace Movies
 {
@@ -21,30 +22,30 @@ namespace Movies
             NavigationService.NavigateAsync(new Uri($"{Screens.AbsoluteURI}/{Screens.MoviesHomeTabbedPage}/{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}", UriKind.Absolute));
         }
 
-        protected override void RegisterTypes()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            RegisterScreens();
-            RegisterServices();
+            RegisterScreens(containerRegistry);
+            RegisterServices(containerRegistry);
         }
 
-        void RegisterScreens()
+        void RegisterScreens(IContainerRegistry containerRegistry)
         {
-            Container.RegisterTypeForNavigation<MoviesHomeTabbedPage>();
-            Container.RegisterTypeForNavigation<ShowingNow>();
-            Container.RegisterTypeForNavigation<Categories>();
-            Container.RegisterTypeForNavigation<SearchResults>();
-            Container.RegisterTypeForNavigation<MovieDetails>();
-            Container.RegisterTypeForNavigation<AboutMe>();
-            Container.RegisterTypeForNavigation<AboutMeNavigationPage>();
-            Container.RegisterTypeForNavigation<ShowingNowNavigationPage>();
-            Container.RegisterTypeForNavigation<CategoriesNavigationPage>();
+            containerRegistry.RegisterForNavigation<MoviesHomeTabbedPage>();
+            containerRegistry.RegisterForNavigation<ShowingNow>();
+            containerRegistry.RegisterForNavigation<Categories>();
+            containerRegistry.RegisterForNavigation<SearchResults>();
+            containerRegistry.RegisterForNavigation<MovieDetails>();
+            containerRegistry.RegisterForNavigation<AboutMe>();
+            containerRegistry.RegisterForNavigation<AboutMeNavigationPage>();
+            containerRegistry.RegisterForNavigation<ShowingNowNavigationPage>();
+            containerRegistry.RegisterForNavigation<CategoriesNavigationPage>();
         }
 
-        void RegisterServices()
+        void RegisterServices(IContainerRegistry containerRegistry)
         {
-            Container.RegisterType(typeof(IMovieService), typeof(MovieService));
-            Container.RegisterType(typeof(IJsonReaderService), typeof(JsonReaderService));
-            Container.RegisterType(typeof(IFileService), typeof(FileService));
+            containerRegistry.Register(typeof(IMovieService), typeof(MovieService));
+            containerRegistry.Register(typeof(IJsonReaderService), typeof(JsonReaderService));
+            containerRegistry.Register(typeof(IFileService), typeof(FileService));
         }
     }
 }
