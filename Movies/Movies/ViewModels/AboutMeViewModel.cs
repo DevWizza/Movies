@@ -29,12 +29,12 @@ namespace Movies.ViewModels
 
         public void OnNavigatedTo(NavigationParameters parameters)
         {
-            ACoolPictureOfMe = "luis.png";
+            
         }
 
         public void OnNavigatingTo(NavigationParameters parameters)
         {
-            
+            ACoolPictureOfMe = "luis.png";
         }
     }
 }

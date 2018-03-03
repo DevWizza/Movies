@@ -17,6 +17,10 @@ namespace Movies
 
         public readonly static string CategoriesNavigationPage = nameof(CategoriesNavigationPage);
 
+        public readonly static string AboutMeNavigationPage = nameof(AboutMeNavigationPage);
+
+        public readonly static string AboutMe = nameof(AboutMe);
+
         public readonly static string ShowingNow = nameof(ShowingNow);
 
         public readonly static string Categories = nameof(Categories);

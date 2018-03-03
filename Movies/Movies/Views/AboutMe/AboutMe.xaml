@@ -4,6 +4,7 @@
     x:Class="Movies.Views.AboutMe"
     BackgroundColor="Black"
     Title="About Me"
+    Icon="ic_info_outline_white"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 
 

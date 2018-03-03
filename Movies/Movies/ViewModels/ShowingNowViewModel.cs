@@ -44,7 +44,7 @@ namespace Movies.ViewModels
             var navigationParameters = new NavigationParameters();
             navigationParameters.Add(NavigationParametersKey.SelectedMovieId, movie.Id);
 
-            await _navigationService.NavigateAsync($"{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}/{Screens.MovieDetails}", navigationParameters);
+            await _navigationService.NavigateAsync($"{Screens.MovieDetails}", navigationParameters);
 
             SelectedMovie = null;
         }
@@ -54,18 +54,18 @@ namespace Movies.ViewModels
              
         }
 
-        public async void OnNavigatedTo(NavigationParameters parameters)
+        public void OnNavigatedTo(NavigationParameters parameters)
+        {
+            
+        }
+
+        public async void OnNavigatingTo(NavigationParameters parameters)
         {
             IsLoading = true;
 
             Movies = await _movieService.GetMoviesAsync();
 
             IsLoading = false;
-        }
-
-        public void OnNavigatingTo(NavigationParameters parameters)
-        {
-            
         }
     }
 }

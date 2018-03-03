@@ -2,31 +2,11 @@
 <xf:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Movies.Views.MoviesHomeTabbedPage"
-             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             prism:ViewModelLocator.AutowireViewModel="True"
              FixedMode="false"
              BarTheme="DarkWithAlpha"
              xmlns:xf="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
              xmlns:screens="clr-namespace:Movies.Views;assembly=Movies"
              BarTextColor="White"
              BarBackgroundColor="Black">
-
-    <screens:ShowingNowNavigationPage Title="{Binding ShowingNowTitle}" Icon="ic_list_white" BarTextColor="White">
-        <x:Arguments>
-            <screens:ShowingNow BindingContext="{Binding ShowingNowViewModel}"/>
-        </x:Arguments>
-    </screens:ShowingNowNavigationPage>
-
-    <screens:CategoriesNavigationPage Title="{Binding CategoriesTitle}" Icon="ic_filter_list_white">
-        <x:Arguments>
-            <screens:Categories BindingContext="{Binding CategoriesViewModel}"/>
-        </x:Arguments>
-    </screens:CategoriesNavigationPage>
-
-    <screens:CategoriesNavigationPage Title="{Binding AboutMeTitle}" Icon="ic_info_outline_white">
-    <x:Arguments>
-        <screens:AboutMe BindingContext="{Binding AboutMeViewModel}"/>
-    </x:Arguments>
-    </screens:CategoriesNavigationPage>
 
 </xf:BottomBarPage>

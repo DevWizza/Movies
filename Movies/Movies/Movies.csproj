@@ -42,7 +42,6 @@
     <Compile Include="Movies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CategoriesViewModel.cs" />
-    <Compile Include="ViewModels\MoviesHomeTabbedPageViewModel.cs" />
     <Compile Include="ViewModels\ShowingNowViewModel.cs" />
     <Compile Include="Views\Categories\Categories.xaml.cs">
       <DependentUpon>Categories.xaml</DependentUpon>

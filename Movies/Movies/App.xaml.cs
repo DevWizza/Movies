@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Movies.Services;
 using Prism;
 using Prism.Ioc;
+using Prism.Navigation;
 
 namespace Movies
 {
@@ -19,7 +20,18 @@ namespace Movies
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync(new Uri($"{Screens.AbsoluteURI}/{Screens.MoviesHomeTabbedPage}/{Screens.ShowingNowNavigationPage}/{Screens.ShowingNow}", UriKind.Absolute));
+            var tabs = CreateTabs();
+
+            NavigationService.NavigateAsync(new Uri(tabs, UriKind.Absolute));
+        }
+
+        private string CreateTabs()
+        {
+            var showingNowTab = $"{KnownNavigationParameters.CreateTab}={Screens.ShowingNowNavigationPage}|{Screens.ShowingNow}";
+            var categoriesTab = $"{KnownNavigationParameters.CreateTab}={Screens.CategoriesNavigationPage}|{Screens.Categories}";
+            var aboutMeTab = $"{KnownNavigationParameters.CreateTab}={Screens.AboutMeNavigationPage}|{Screens.AboutMe}";
+
+            return $"{Screens.AbsoluteURI}/{Screens.MoviesHomeTabbedPage}?{showingNowTab}&{categoriesTab}&{aboutMeTab}";
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

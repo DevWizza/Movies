@@ -39,7 +39,7 @@ namespace Movies.ViewModels
             var navigationParameters = new NavigationParameters();
             navigationParameters.Add(NavigationParametersKey.SelectedCategoryId, category.Title);
 
-            await _navigationService.NavigateAsync($"{Screens.CategoriesNavigationPage}/{Screens.Categories}/{Screens.SearchResults}", navigationParameters);
+            await _navigationService.NavigateAsync($"{Screens.SearchResults}", navigationParameters);
 
             SelectedCategory = null;
         }
@@ -50,6 +50,11 @@ namespace Movies.ViewModels
         }
 
         public void OnNavigatedTo(NavigationParameters parameters)
+        {
+            
+        }
+
+        public void OnNavigatingTo(NavigationParameters parameters)
         {
             Categories = new List<Category>
             {
@@ -79,11 +84,6 @@ namespace Movies.ViewModels
                     Image = "documentary"
                 }
             };
-        }
-
-        public void OnNavigatingTo(NavigationParameters parameters)
-        {
-             
         }
     }
 }
