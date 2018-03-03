@@ -22,7 +22,7 @@ namespace Movies
 
             var tabs = CreateTabs();
 
-            NavigationService.NavigateAsync(new Uri(tabs, UriKind.Absolute));
+            NavigationService.NavigateAsync(tabs);
         }
 
         private string CreateTabs()
@@ -31,7 +31,7 @@ namespace Movies
             var categoriesTab = $"{KnownNavigationParameters.CreateTab}={Screens.CategoriesNavigationPage}|{Screens.Categories}";
             var aboutMeTab = $"{KnownNavigationParameters.CreateTab}={Screens.AboutMeNavigationPage}|{Screens.AboutMe}";
 
-            return $"{Screens.AbsoluteURI}/{Screens.MoviesHomeTabbedPage}?{showingNowTab}&{categoriesTab}&{aboutMeTab}";
+            return $"{Screens.MoviesHomeTabbedPage}?{showingNowTab}&{categoriesTab}&{aboutMeTab}";
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
